@@ -35,16 +35,16 @@ export default function RegistrationForm(props) {
         .required("Required"),
       position_id: Yup.number().required("Required"),
       photo: Yup.mixed()
-        .test(
-          "fileSize",
-          "File Size is too large",
-          (value) => value.size < 5242880
-        )
-        .test(
-          "fileType",
-          "Unsupported File Format",
-          (value) => value.type === "image/jpg" || "image/jpeg"
-        ),
+        .test("fileSize", "File Size is too large", (value) => {
+          if (value) {
+            return value.size < 5242880;
+          }
+        })
+        .test("fileType", "Unsupported File Format", (value) => {
+          if (value) {
+            return value.type === "image/jpg" || "image/jpeg";
+          }
+        }),
     }),
     onSubmit: (values, { resetForm }) => {
       const formData = new FormData();
@@ -109,9 +109,11 @@ export default function RegistrationForm(props) {
           {formik.touched.phone && formik.errors.phone ? (
             <p className="registration__error">{formik.errors.phone}</p>
           ) : null}
-          <p className="registration__sign">
-            Enter phone number in open format
-          </p>
+          {!formik.errors.phone && (
+            <p className="registration__sign">
+              Enter phone number in open format
+            </p>
+          )}
         </label>
         <div className="registration__radio-wrapper">
           <p className="registration__subheader">Select your position</p>
@@ -160,6 +162,7 @@ export default function RegistrationForm(props) {
         <button
           className="registration__button"
           type="submit"
+          disabled={formik.isSubmitting || !formik.dirty}
           onClick={formik.handleSubmit}
         >
           Sign up now
