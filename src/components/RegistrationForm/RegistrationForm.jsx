@@ -108,8 +108,7 @@ export default function RegistrationForm(props) {
           />
           {formik.touched.phone && formik.errors.phone ? (
             <p className="registration__error">{formik.errors.phone}</p>
-          ) : null}
-          {!formik.errors.phone && (
+          ) : (
             <p className="registration__sign">
               Enter phone number in open format
             </p>
