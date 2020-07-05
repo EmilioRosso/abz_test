@@ -161,7 +161,7 @@ export default function RegistrationForm(props) {
         <button
           className="registration__button"
           type="submit"
-          disabled={formik.isSubmitting || !formik.dirty}
+          disabled={!(formik.isValid && formik.dirty)}
           onClick={formik.handleSubmit}
         >
           Sign up now
