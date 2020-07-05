@@ -1,0 +1,76 @@
+#users {
+  background-color: $background-color-two;
+}
+
+.users {
+  @extend %grid-container;
+  @extend %section-container;
+  padding-top: 68px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 86px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 158px;
+  }
+}
+
+.users__heading {
+  @extend %header-1;
+  grid-column: span 6;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 18px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 12;
+  }
+}
+
+.users__text {
+  @extend %plain-text;
+  grid-column: span 6;
+  text-align: center;
+  margin-bottom: 34px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 77px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 12;
+  }
+}
+
+.users__list {
+  grid-column: 2 / 6;
+
+  @media screen and (min-width: 768px) {
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.users__button {
+  @extend %simple-button;
+  grid-column: span 6;
+  margin: 0 auto;
+  // @media screen and (min-width: 768px) {
+  //   margin: 0 auto;
+  // }
+  @media screen and (min-width: 1024px) {
+    grid-column: span 12;
+  }
+}

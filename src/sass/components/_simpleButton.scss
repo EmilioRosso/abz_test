@@ -1,0 +1,16 @@
+%simple-button {
+  display: block;
+  @extend %plain-text;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 210px;
+  height: 38px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: $background-color-one;
+}

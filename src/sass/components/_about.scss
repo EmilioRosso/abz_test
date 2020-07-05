@@ -1,0 +1,93 @@
+#about {
+  @extend %section-container;
+  @extend %grid-container;
+
+  @media screen and (min-width: 768px) {
+    padding: 113px 30px 122px 30px;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 160px;
+    padding-bottom: 136px;
+  }
+}
+
+.about__heading {
+  grid-column: span 6;
+  @extend %header-1;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 46px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: span 12;
+    margin-bottom: 50px;
+  }
+}
+
+.about__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  grid-column: span 6;
+  width: 290px;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / 3;
+    width: 246px;
+    margin-bottom: 0;
+    padding-top: 24px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 1 / 6;
+    width: 340px;
+    margin: 0 auto;
+  }
+}
+
+.about__main-wrapper {
+  grid-column: span 6;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 3 / span 4;
+    padding: 20px 0 20px 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 6 / 13;
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+.about__smallHeading {
+  @extend %header-2;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+  }
+}
+
+.about__text {
+  @extend %plain-text;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.about__button {
+  @extend %transparent-button;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}

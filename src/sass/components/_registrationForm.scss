@@ -1,0 +1,136 @@
+.registration__form {
+  @media screen and (min-width: 1024px) {
+    margin: 0 auto;
+    width: 468px;
+  }
+}
+
+.registration__label {
+  @extend %plain-text;
+  display: block;
+  text-align: left;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__label:last-of-type {
+  margin-bottom: 14px;
+
+  // margin-bottom: 40px;
+}
+
+.registration__name {
+  margin-bottom: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__input {
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border: 1px solid #b2b9c0;
+  border-radius: 4px;
+}
+
+.registration__input::placeholder {
+  @extend %plain-text;
+  color: #b2b9c0;
+}
+
+.registration__sign {
+  @extend %plain-text;
+  font-size: 12px;
+  line-height: 26px;
+  color: #6c757d;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__radio-wrapper {
+  margin-bottom: 10px;
+}
+
+.registration__subheader {
+  @extend %plain-text;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.registration__subheader--photo {
+  @extend %plain-text;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.registration__profession {
+  @extend %plain-text;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__radio {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.registration__file-upload {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.registration__button {
+  @extend %simple-button;
+  margin: 0 auto;
+}
+
+.registration__error {
+  @extend %plain-text;
+  font-size: 10px;
+  color: #f00;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.registration__photo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 40px;
+  // padding: 12px;
+  border: 1px solid #b2b9c0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.registration__photo-name {
+  @extend %plain-text;
+  color: #b2b9c0;
+  padding-left: 15px;
+}
+
+.registration__photo-button {
+  @extend %plain-text;
+  line-height: 38px;
+  display: block;
+  width: 80px;
+  height: 100%;
+  border-left: 1px solid #b2b9c0;
+  background-color: #f8f7f5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}

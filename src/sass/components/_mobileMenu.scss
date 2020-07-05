@@ -1,0 +1,48 @@
+.mobile-menu__backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu {
+  width: 290px;
+  background-color: $background-color-one;
+}
+
+.mobile-menu__logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.mobile-menu__list {
+  padding: 30px 15px 30px 15px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.mobile-menu__list-item {
+  @extend %plain-text;
+}
+
+.mobile-menu__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.mobile-menu__link {
+  @extend %plain-text;
+  font-size: 14px;
+}
+
+.mobile-menu__link:hover {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.mobile-menu__link:focus {
+  text-decoration: none;
+  color: $primary-color;
+}

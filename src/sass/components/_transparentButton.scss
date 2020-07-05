@@ -1,0 +1,14 @@
+%transparent-button {
+  @extend %plain-text;
+  display: block;
+  grid-column: span 6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 120px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: $primary-color;
+}
